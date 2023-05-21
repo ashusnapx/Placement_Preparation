@@ -56,5 +56,5 @@ int main() {
 }
 
 /* 
-Time complexity : O(n) <-- best, average & worst
+Time complexity : O(n square) <-- best, average & worst
  */

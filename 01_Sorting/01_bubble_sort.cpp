@@ -5,31 +5,43 @@ Step 1 - Compare the first two elements
 Step 2 - Swap it if arr[i] > arr[i+1]
 Step 3 - if not, then move forward
 Step 4 - In first round the maximum element will come  at last position
-Step 5 - Swap it with element at 1st index
-Repeat
+Step 5 - In second round we don't need to compare the arr[n-1] with arr[n-2], because the element at arr[n-1] is already sorted and so the element at arr[n-2]
+Step 6 - Thus in every single round the size of array for inspection decreases, like 
+in 1st round - arr[n-1] became sorted
+in 2nd round - arr[n-2] became sorted
+in 3rd round - arr[n-3] became sorted
+.
+.
+.
+in nth round - arr[n-n] became sorted
 
 TODO: Pushes the maximum to the last by adjacent swaps.
 */
 
 #include <bits/stdc++.h>
-#include <iostream>
 using namespace std;
 
 
-void selection_sort(int *arr, int n)
+void bubble_sort(int *arr, int n)
 {
-  int min_index = 0, min_element = INT_MIN;
-  for (int i = 0; i < n - 2; i++) // n-2 because, if the size of array is n, then we index it from 0 to n-1 and the last index ie. n-1 will get sorted automatically because a single element is always sorted.
+  for(int i = n-1; i >= 1; i--)
   {
-    min_index = i;
-    for(int j = i; j < n-1; j++)
+    int didSwap = 0;
+    for(int j = 0; j <= i-1; j++)
     {
-      if(arr[j] < arr[min_index])
-      {
-        min_index = j;
-      }
+        if(arr[j] > arr[j+1])
+        {
+            int temp = arr[j+1];
+            arr[j+1] = arr[j];
+            arr[j] = temp;
+            didSwap = 1;
+        }
     }
-    swap(arr[min_index], arr[i]);
+    if(didSwap == 0)
+    {
+        break;
+    }
+    // cout << "Le vai tera array sorted nhi hai" <<endl;
   }
 }
 
@@ -45,7 +57,7 @@ int main() {
     cin >> arr[i];
   }
 
-  selection_sort(arr, n);
+  bubble_sort(arr, n);
 
   for (int i = 0; i < n; i++)
   {
@@ -54,3 +66,5 @@ int main() {
 
   return 0;
 }
+
+/* Time complexity --> 0(n square) <-- worst case */
