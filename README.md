@@ -1,7 +1,7 @@
 # Placement Preparation 🚀
 
 <p align="center">
-  <img src="https://thumbs.gfycat.com/BitterTameGnatcatcher-size_restricted.gif" alt="Logo" width="200" height="200">
+  <img src="https://thumbs.gfycat.com/BitterTameGnatcatcher-size_restricted.gif" alt="Logo" width="375" height="211">
 </p>
 
 Welcome to the Placement Preparation repository! This repository is a comprehensive resource for preparing for job placements, covering topics such as aptitude, data structures, and algorithms. It includes curated resources from various platforms like YouTube, paid courses, and more. 
