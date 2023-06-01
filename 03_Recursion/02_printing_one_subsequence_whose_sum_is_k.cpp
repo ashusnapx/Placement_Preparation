@@ -5,6 +5,7 @@ bool printF(int index, vector<int> &result, int initial_sum, int final_sum, int 
 {
     if(index == arr_size)
     {
+        // condition satisfied
         if(initial_sum == final_sum)
         {
             for(auto it: result)
@@ -12,8 +13,11 @@ bool printF(int index, vector<int> &result, int initial_sum, int final_sum, int 
                 cout << it << " ";
             }
             cout << endl;
+            return true;
         }
-        return;
+
+        // condition not satisfied
+        return false;
     }
     
 
@@ -24,14 +28,21 @@ bool printF(int index, vector<int> &result, int initial_sum, int final_sum, int 
     initial_sum += arr[index];
 
     // call the recursive functions
-    printF(index + 1, result, initial_sum, final_sum, arr, arr_size);
+    if(printF(index + 1, result, initial_sum, final_sum, arr, arr_size)){
+        return true;
+    }
 
     // till now the pointer has traversed the whole recursive tree and it had also reached leaf node, so now its traversing back and making initial sum 0 again in order to check other part of tree ie. right tree.
     initial_sum -= arr[index];
     result.pop_back();
 
     // TODO: not pick
-    printF(index + 1, result, initial_sum, final_sum, arr, arr_size);
+    if(printF(index + 1, result, initial_sum, final_sum, arr, arr_size)){
+        return true;
+    }
+
+    // if none of the recursive calls gave false, then
+    return false;
 }
 
 int main()
