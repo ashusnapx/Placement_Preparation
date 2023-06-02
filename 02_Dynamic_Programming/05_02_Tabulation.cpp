@@ -19,7 +19,7 @@ int maximum_non_adjacent_sum(vector<int> nums)
     for(int i = 1 ; i < n ; i++)
     {
         int take = nums[i];
-        if(i > 1)
+        if(i >= 2)
         {
             take += prev2;
         }
@@ -38,8 +38,8 @@ int main()
 {
     vector<int> nums;
     nums.push_back(2);
-    nums.push_back(1);
-    nums.push_back(4);
+    nums.push_back(3);
+    nums.push_back(2);
     nums.push_back(9);
 
     cout << maximum_non_adjacent_sum(nums);
