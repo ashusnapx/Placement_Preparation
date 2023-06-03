@@ -26,10 +26,11 @@ int lower_bound_without_stl(int *arr, int arr_size, int target)
 int main()
 {
     // int arr[] = { 3, 5 , 8 , 15 , 19 };
-    int arr[] = { 1 , 2 , 3 , 3 , 5 , 8 , 8 , 10 , 10 , 11 };
-    int n = 10;
-    cout << "Lower bound = " << lower_bound_without_stl(arr, n, 9) << endl;
-    cout << "Lower bound (using STL) = "<< lower_bound(arr , arr + 10 , 9) - arr << endl;
+    // int arr[] = { 1 , 2 , 3 , 3 , 5 , 8 , 8 , 10 , 10 , 11 };
+    int arr[] = { 1,2,1,3,5,6,4 };
+    int n = 7;
+    cout << "Lower bound = " << lower_bound_without_stl(arr, n, 6) << endl;
+    cout << "Lower bound (using STL) = "<< lower_bound(arr , arr + 7 , 6) - arr << endl;
 }
 
 /* Time complexity - O(log base 2 n) */
