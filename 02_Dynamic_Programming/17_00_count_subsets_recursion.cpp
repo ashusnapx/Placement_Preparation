@@ -4,11 +4,9 @@ int helper(int index, int target, vector<int> &num)
     /* base case */
     if(index == 0)
     {
-        return num[0] == target;
-    }
-    if(target == 0)
-    {
-        return 1;
+        if(target == 0 and num[0] == 0) return 2;
+        if(target == 0 or num[0] == 0) return 1;
+        return 0;
     }
 
     /* subsets pick and not pick */
