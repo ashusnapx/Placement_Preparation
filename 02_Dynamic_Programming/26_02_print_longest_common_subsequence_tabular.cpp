@@ -72,3 +72,29 @@ int main()
 
     return 0;
 }
+
+👨‍💻 Overview: This code finds the Longest Common Subsequence(LCS) of two given strings 'a' and 'b' using Dynamic Programming. It also returns the size of the LCS.
+
+📝 Variables:
+- a: First string
+- b: Second string
+- lcs_size: Stores the size of the LCS
+- prev: Vector to store the previous row of the dynamic programming table
+- cur: Vector to store the current row of the dynamic programming table
+- result: String to store the LCS
+- index: Index to keep track of the index in the result string
+- i, j: Indexes to traverse the dynamic programming table
+
+💻 Code Walkthrough:
+- We first calculate the sizes of string 'a' and 'b'
+- We declare two vectors 'prev' and 'cur' to store the previous and current rows of the dynamic programming table. Here, we right shift the vector indexes so that the negative index is not there.
+- We use two nested for-loops to traverse the dynamic programming table starting from the bottom.
+- If the characters at 'i-1' and 'j-1' of 'a' and 'b' are equal, we add 1 to the LCS size and move to the diagonal element of the table.
+- If the characters are not equal, we move to the maximum element of its top or left.
+- We use a while-loop to traverse the dynamic programming table from the end to start to get the LCS.
+- We check if the characters at 'i-1' and 'j-1' of 'a' and 'b' are equal. If yes, we store the character in the result string and move diagonally.
+- If the element to the left is greater, we move left, else we move up.
+- We return the result string and the size of LCS.
+
+🤔 Optimization:
+- We can optimize the space complexity of this code by using only two rows of the dynamic programming table instead of two vectors.
