@@ -1,4 +1,9 @@
-/* dekho question kya bol rha hai, mere pas ek matrix hai, usmien kuch bhi numbers filled hn, aur mujhe sr(starting row mtlb x coordinate) aur saath mei sc(starting column) aur ek initial color diya hua (color basically ek number hai), ab dekho, 4 directions mei jo uske jaise rang honge unko change krna hai ek given color (yaani ki ek number se) aur jo naya matrix hoga usey return krna hai*/
+/* dekho question kya bol rha hai, mere pas ek matrix hai, 
+usmien kuch bhi numbers filled hn, aur mujhe 
+sr(starting row mtlb x coordinate) aur saath mei sc(starting column) 
+aur ek initial color diya hua (color basically ek number hai), 
+ab dekho, 4 directions mei jo uske jaise rang honge unko change krna hai ek given color 
+(yaani ki ek number se) aur jo naya matrix hoga usey return krna hai*/
 
 #include <iostream>
 #include <vector>
